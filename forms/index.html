@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Practice-9</title>
+</head>
+<body style="height:2000px;">
+    <!--
+    https://webref.ru/layout/learn-html-css/building-forms
+        Tag Form
+            form action
+        Tag input
+            input type http://htmlbook.ru/html/input/type
+            input value
+            input name
+            placeholder
+            autofocus
+        Form elements
+            input
+            select
+            textarea,
+            button
+        Для структурирования
+        label,
+        fieldset
+        legend
+     -->
+
+    <form name="myForm" action="#">
+        <fieldset>
+            <legend>Профайл</legend>
+
+            <!-- ТЕКСТОВОЕ ПОЛЕ -->
+            <!-- value,
+                 name,
+                 type,
+                 disabled,
+                 placeholder,
+                 required -->
+            <label for="firstname">Имя:</label> <input type="text" name="firstname" id="firstname" value="Марк" autofocus>
+            Фамилия: <input type="text" name="lastname" placeholder="Цукерберг" required>
+
+            <!-- ПЕРЕКЛЮЧАТЕЛИ -->
+            <!-- можно указать пункт выбранным по-умолчанию с помощью атрибута checked -->
+            Пол:<br>
+            <input type="radio" name="gender" value="male" >
+            Мужчина<br>
+            <input type="radio" name="gender" value="female" >
+            Женщина<br>
+            <input type="radio" id="gender_male" name="gender1" value="male">
+            <label for="gender_male">Мужчина</label><br>
+            <input type="radio" id="gender_female" name="gender1" value="female">
+            <label for="gender_female">Женщина</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дополнительные данные</legend>
+
+            <!-- ФЛАГИ -->
+            <br>
+            Любимый спорт:<br>
+            <input type="checkbox" id="interest1" name="interest1" value="run" checked>
+            <label for="interest1">Бег</label><br>
+            <input type="checkbox" id="interest2" name="interest2" value="Футбол"><label for="interest2">Футбол</label><br>
+            <input type="checkbox" id="interest3" name="interest3" value="Борьба"><label for="interest3">Борьба</label><br>
+
+            <!-- ЦИФРОВОЕ ПОЛЕ -->
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" min="17" max="89">
+
+            <label>Позиция: </label>
+            <!-- ВЫПАДАЮЩИЙ СПИСОК -->
+            <!-- можно разрешить указать несколько пунктов с атрибутом multiple -->
+            <select name="position">
+                <option value="designer">Дизайнер</option>
+                <option value="programmer">Программист</option>
+                <option value="cto">CTO</option>
+            </select>
+            <!-- ТЕКСТОВОЕ ПОЛЕ -->
+            Расскажите немного о себе:<br>
+            <textarea name="message" rows="10" cols="50">Что-то хорошее...</textarea>
+        </fieldset>
+
+        <!-- КНОПКИ -->
+        <input class="btn" type="submit" value="Отправить">
+        <input class="btn" type="button" value="Отправить">
+
+
+        <button class="btn" type="submit">jlkfjsldajf</button>
+        <input class="btn" type="reset">
+    </form>
+</body>
+</html>

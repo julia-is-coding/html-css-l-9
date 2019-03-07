@@ -1,0 +1,93 @@
+/*
+    1. Составляющие сетки
+    2. Делаем сетку размером 3 колонки
+    3. Делаем сетку адаптивной
+    4. Делаем сетку универсальной - 12 кол
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    max-width: 800px;
+}
+
+.row {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+[class*='col-'] {
+    /* min-height: 1px; */
+    padding: 0 1rem;
+    float: left;
+}
+
+.col-1-3 {
+    width: 33.333333%;
+}
+
+.col-2-3 {
+    width: 66.666666%;
+}
+
+.col-3-3 {
+    width: 100%;
+}
+
+/* Делаем сетку адаптивной */
+
+@media (min-width: 500px) {
+    .col-sm-1-3 {
+        width: 33.333333%;
+    }
+
+    .col-sm-2-3 {
+        width: 66.666666%;
+    }
+
+    .col-sm-3-3 {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .col-md-1-3 {
+        width: 33.333333%;
+    }
+
+    .col-md-2-3 {
+        width: 66.666666%;
+    }
+
+    .col-md-3-3 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .col-lg-1-3 {
+        width: 33.333333%;
+    }
+
+    .col-lg-2-3 {
+        width: 66.666666%;
+    }
+
+    .col-lg-3-3 {
+        width: 100%;
+    }
+}

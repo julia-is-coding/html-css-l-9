@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100rem;
+}
+
+.btn {
+    padding: .3rem 1rem;
+
+    border: 1px solid #3084c7;
+    border-radius: 4px;
+
+    background: #5db0f1;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+}
